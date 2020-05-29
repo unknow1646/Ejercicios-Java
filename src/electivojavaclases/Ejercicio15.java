@@ -10,18 +10,18 @@ package electivojavaclases;
  * @author Hernàn
  */
 public class Ejercicio15 {
-    String numeroIngresado;
+    String numeroIngresado15;
     
     
-    public Ejercicio15(String numeroIngresado){
-        this.numeroIngresado=numeroIngresado;
+    public Ejercicio15(String numeroIngresado15){
+        this.numeroIngresado15=numeroIngresado15;
     }
     
     public void palindromo(){
-       int numero= Integer.parseInt(numeroIngresado);
-       int aux= Integer.parseInt(numeroIngresado);;
-       int[] original = new int[numeroIngresado.length()];
-       int[] auxiliar = new int[numeroIngresado.length()];
+       int numero= Integer.parseInt(numeroIngresado15);
+       int aux= Integer.parseInt(numeroIngresado15);;
+       int[] original = new int[numeroIngresado15.length()];
+       int[] auxiliar = new int[numeroIngresado15.length()];
        int i=original.length - 1,k=0;
        boolean pal = false;
        
@@ -45,9 +45,9 @@ public class Ejercicio15 {
            
        }
        if(pal==true){
-               System.out.println("El numero: "+numeroIngresado+ " es palindromo");
+               System.out.println("El numero: "+numeroIngresado15+ " es palindromo");
            }else{
-               System.out.println("El numero: "+numeroIngresado+ " no es palindromo");
+               System.out.println("El numero: "+numeroIngresado15+ " no es palindromo");
                
        }  
     }

@@ -23,7 +23,7 @@ public class Ejercicio11 {
        int[] arreglo = new int[numeroIngresado.length()];
        int i = arreglo.length - 1;
        while(numero>0){
-            arreglo[i] = numero%10;
+           arreglo[i] = numero%10;
             numero = numero / 10;
             i--;
            
@@ -32,10 +32,16 @@ public class Ejercicio11 {
        for(int j=0; j < arreglo.length; j++){
            if(arreglo[j]%2==0){
                cont=cont+1;
-           }  
+           }
+           
        }
        System.out.println("El numero "+numeroIngresado+" contiene "+cont+" numeros pares.");
-       }  
+       
+           
+       }
+           
+               
+        
     }
     
 
