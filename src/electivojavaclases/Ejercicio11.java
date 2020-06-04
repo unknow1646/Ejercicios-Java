@@ -28,7 +28,6 @@ public class Ejercicio11 {
             i--;
            
        }
-       
        for(int j=0; j < arreglo.length; j++){
            if(arreglo[j]%2==0){
                cont=cont+1;
