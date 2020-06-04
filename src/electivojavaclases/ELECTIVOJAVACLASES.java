@@ -5,6 +5,9 @@
  */
 package electivojavaclases;
 
+
+import java.util.Arrays;
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -93,6 +96,17 @@ public class ELECTIVOJAVACLASES {
                         eje7.suma();
                         break;
                         
+                    case "9":
+                         System.out.println("Introduzca la fecha con formato dd-mm-yyyy");
+                         Scanner sc9 = new Scanner(System.in);
+                         System.out.println("Ingrese la fecha de caducidad del medicamento");
+                         String fecha1 = sc9.nextLine();
+                         System.out.println("Ingrese la fecha actual");
+                         String fecha2= sc9.nextLine();
+                         Ejercicio9 eje9 = new Ejercicio9(fecha1,fecha2);
+                         eje9.fecha();
+                         break;
+
                     case "11":
                         Scanner sc11 = new Scanner(System.in);
                         System.out.println("Introduce un número");
@@ -100,6 +114,31 @@ public class ELECTIVOJAVACLASES {
                         Ejercicio11 eje11 = new Ejercicio11(numeroIngresado);
                         eje11.pares();
                         break;
+                        
+                        
+                    case "12":
+                        float promedio;
+                        float suma=0;
+                        Scanner sc12 = new Scanner(System.in);
+                        System.out.println("Ingrese la cantidad de notas ");
+                        int N12= sc12.nextInt();
+                        String salto12=sc12.nextLine();
+                        float [] notas = new float[N12];
+                        if(N12<2){
+                            System.out.println("Debe ser un numero mayor a 2");
+                        }else{
+                            for(int i=0;i<N12;i++){
+                                System.out.println("Ingrese Nota: "+ i);
+                                Float nota= sc12.nextFloat();
+                                notas[i]=nota;
+                            }
+                            Arrays.sort(notas);
+                        }
+                        Ejercicio12 eje12 = new Ejercicio12(notas,N12);
+                        eje12.promedio();
+                        break;
+                        
+                        
                         
                     case "15":
                         Scanner sc15 = new Scanner(System.in);
