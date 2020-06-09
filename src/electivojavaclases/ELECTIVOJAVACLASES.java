@@ -7,9 +7,11 @@ package electivojavaclases;
 
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -23,7 +25,7 @@ public class ELECTIVOJAVACLASES {
      * @param args
      */
     public static void main(String[] args) {
-        String menu = "Elija una opción: 1, 2, 3 o 4 \n";
+        String menu = "Elija una opción:  \n";
 		for (int i = 1; i <= 32; i++) {
 			menu = menu + " opción " + i + "\n";
 		}
@@ -76,6 +78,41 @@ public class ELECTIVOJAVACLASES {
                         
                         break;
                         
+                    case "4":
+                        Scanner sc4 = new Scanner(System.in);
+                        System.out.println("Ingrese el numero de alumnos ");
+                        
+                        int n= sc4.nextInt();
+                        String salto=sc4.nextLine();
+                        Ejercicio4 eje4[]= new Ejercicio4[n];
+                        for(int i=0;i<n;i++)
+                            eje4[i]= new Ejercicio4();
+                        for(int i=0;i<n;i++){
+                            int j=i+1;
+                            System.out.println("Alumno: "+j);
+                            eje4[i].menornota();
+                        }
+        
+                        float menor=eje4[0].promedio();
+                        int ban=0;
+                        for (int i=0;i<n;i++){
+                            if(menor>eje4[i].promedio()){
+                                menor=eje4[i].promedio();
+                                ban=i+1;
+                            }
+                        }
+                        System.out.println("El menor promedio es "+menor+" del alumno "+ban);
+                        int cont=0;
+                        for(int i=0;i<n;i++){
+                            if(eje4[i].cantAsig>4)
+                                cont++;
+                        }
+                        int porcentaje=cont*100/n;
+                        System.out.println("Un "+porcentaje+"% tiene más de 4 asignaturas");
+                        
+                        
+                        break;
+                        
                     case "5":
                         Scanner sc5 = new Scanner(System.in);
                         System.out.println("Ingrese la dimension del lado A: ");
@@ -117,8 +154,6 @@ public class ELECTIVOJAVACLASES {
                         
                         
                     case "12":
-                        float promedio;
-                        float suma=0;
                         Scanner sc12 = new Scanner(System.in);
                         System.out.println("Ingrese la cantidad de notas ");
                         int N12= sc12.nextInt();
@@ -147,6 +182,26 @@ public class ELECTIVOJAVACLASES {
                         Ejercicio15 eje15 = new Ejercicio15(numeroIngresado15);
                         eje15.palindromo();
                         break;
+                        
+                    case "26":
+                        Ejercicio26 eje26 = new Ejercicio26();
+                        System.out.println("El promedio de notas es :"+eje26.promedio());
+                        eje26.menornota();
+                        
+                        break;
+                        
+                    case "28":
+                        Scanner sc28 = new Scanner(System.in);
+                        System.out.println("INTRODUCE EL NOMBRE DEL PRIMER CANDIDATO");
+                        String NOMBRE1= sc28.nextLine();
+                        System.out.println("INTRODUCE EL NOMBRE DEL SEGUNDO CANDIDATO");
+                        String NOMBRE2= sc28.nextLine();
+                        System.out.println("INTRODUCE EL NOMBRE DEL TERCER CANDIDATO");
+                        String NOMBRE3= sc28.nextLine();
+                        Ejercicio28 eje28 = new Ejercicio28(NOMBRE1,NOMBRE2,NOMBRE3);
+                        eje28.votacion();
+                        
+                        break;
                                
                  
                     case "31":
@@ -157,6 +212,7 @@ public class ELECTIVOJAVACLASES {
                         System.out.println("-----------------o--------------");
                         eje31.Primo();
                         break;
+
                 }
     }
 }

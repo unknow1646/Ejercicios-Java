@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author Hernàn
  */
-public class Ejercicio4 {
+public class Ejercicio26 {
     int cantAsig;
     String asig[];
     int notas[];
     
-    public Ejercicio4(){
+    public Ejercicio26(){
         Scanner sc26 = new Scanner(System.in);
         System.out.println("Ingrese la cantidad de asignaturas ");
         this.cantAsig= sc26.nextInt();
@@ -51,6 +51,7 @@ public class Ejercicio4 {
             suma=suma+notas[i];
         return suma/cantAsig;
     }
+    
     
     
 }

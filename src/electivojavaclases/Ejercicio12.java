@@ -12,8 +12,8 @@ import java.util.Arrays;
  * @author Hernàn
  */
 public class Ejercicio12 {
-    int N12; //tamaño
-    float [] notas ;
+    int N12; //tamaño del arreglo
+    float [] notas; //arreglo de notas
     
     public Ejercicio12(float [] notas,int N12){
         this.notas=notas;
