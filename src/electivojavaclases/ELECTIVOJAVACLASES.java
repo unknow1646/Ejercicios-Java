@@ -143,6 +143,15 @@ public class ELECTIVOJAVACLASES {
                          Ejercicio9 eje9 = new Ejercicio9(fecha1,fecha2);
                          eje9.fecha();
                          break;
+                         
+                    case "10":
+                        System.out.println("Introduzca la fecha con formato dd/mm/yyyy");
+                        Scanner sc10 = new Scanner(System.in);
+                        System.out.println("Ingrese la fecha de su nacimiento");
+                        String fechaNacimiento = sc10.nextLine();
+                        Ejercicio10 eje10 = new Ejercicio10(fechaNacimiento);
+                        eje10.fecha();
+                        break;
 
                     case "11":
                         Scanner sc11 = new Scanner(System.in);
