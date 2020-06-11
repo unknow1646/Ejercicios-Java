@@ -181,6 +181,19 @@ public class ELECTIVOJAVACLASES {
                         Ejercicio12 eje12 = new Ejercicio12(notas,N12);
                         eje12.promedio();
                         break;
+                    
+                    case "14":
+                        Scanner sc14 = new Scanner(System.in);
+                        System.out.println("Introduce el valor A de la division");
+                        int numeroA = sc14.nextInt();
+                        System.out.println("Introduce el valor B de la division");
+                        int numeroB = sc14.nextInt();
+                        Ejercicio14 eje14 = new Ejercicio14(numeroA,numeroB);
+                        eje14.division();
+                                
+                        
+                        
+                        break;
                         
                         
                         
