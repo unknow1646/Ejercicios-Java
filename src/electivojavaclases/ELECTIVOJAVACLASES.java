@@ -205,6 +205,14 @@ public class ELECTIVOJAVACLASES {
                         eje15.palindromo();
                         break;
                         
+                    case "21":
+                        
+                        Ejercicio21 eje21= new Ejercicio21();
+                        
+                        
+                        break;
+                        
+                        
                     case "26":
                         Ejercicio26 eje26 = new Ejercicio26();
                         System.out.println("El promedio de notas es :"+eje26.promedio());
