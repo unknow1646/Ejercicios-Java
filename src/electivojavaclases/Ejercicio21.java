@@ -15,15 +15,8 @@ import java.util.Scanner;
 public class Ejercicio21 {
     int numeroIngresado;
     
-    public Ejercicio21(){
-        Scanner sc21 = new Scanner (System.in);
-        System.out.println("Introduzca un número");
-        this.numeroIngresado = sc21.nextInt();
-        System.out.println("El factorial de "+numeroIngresado+" es: "+factorial(numeroIngresado));
-        
-        
+    public Ejercicio21(){    
     }
-    
     
     public int factorial(int numeroIngresado){
         if (numeroIngresado==0)
@@ -31,5 +24,9 @@ public class Ejercicio21 {
         else
             return numeroIngresado * factorial(numeroIngresado-1);
         
+        
+        
     }
+    
+    
 }

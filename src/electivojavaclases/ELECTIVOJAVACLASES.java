@@ -206,10 +206,24 @@ public class ELECTIVOJAVACLASES {
                         break;
                         
                     case "21":
-                        
+                        Scanner sc21 = new Scanner (System.in);
+                        System.out.println("Introduzca un número");
+                        int numeroIngresado21 = sc21.nextInt();
                         Ejercicio21 eje21= new Ejercicio21();
+                        System.out.println("El resultado del factorial de "+numeroIngresado21+" es "+
+                                eje21.factorial(numeroIngresado21));
+                              
+
+                        break;
                         
-                        
+                    case "22":
+                        Scanner sc22 = new Scanner (System.in);
+                        System.out.println("Introduzca N");
+                        int numeroIngresadoA = sc22.nextInt();
+                        System.out.println("Introduzca K");
+                        int numeroIngresadoB = sc22.nextInt();
+                        Ejercicio22 eje22= new Ejercicio22();
+                        eje22.combinatoria(numeroIngresadoA,numeroIngresadoB);
                         break;
                         
                         
