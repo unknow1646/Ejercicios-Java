@@ -6,6 +6,7 @@
 package electivojavaclases;
 
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -190,9 +191,6 @@ public class ELECTIVOJAVACLASES {
                         int numeroB = sc14.nextInt();
                         Ejercicio14 eje14 = new Ejercicio14(numeroA,numeroB);
                         eje14.division();
-                                
-                        
-                        
                         break;
                         
                         
@@ -204,6 +202,47 @@ public class ELECTIVOJAVACLASES {
                         Ejercicio15 eje15 = new Ejercicio15(numeroIngresado15);
                         eje15.palindromo();
                         break;
+                        
+                    case "16":
+                        float promedio=0, suma=0;
+                        int contM=0,  contF=0;
+                        Scanner sc16 = new Scanner(System.in);
+                        System.out.println("Ingrese el numero de estudiantes ");
+                        int tamano= sc16.nextInt();
+                        String salto16=sc16.nextLine();
+                        Ejercicio16 arreglo[]= new Ejercicio16[tamano];
+                        if(tamano>=6){
+                            for(int i=0;i<tamano;i++){
+                                System.out.println("Ingrese Sexo del estudiante (M o F ");
+                                String sexo= sc16.nextLine();
+                                if(sexo=="F"){
+                                    contF=contF+1;
+                                }else{
+                                    contM=contM+1;
+                                }
+                                System.out.println("Ingrese Puntaje del estudiante: ");
+                                float puntaje  = sc16.nextFloat();
+                                String salto161=sc16.nextLine();
+                                arreglo[i] = new Ejercicio16(sexo,puntaje);
+                                
+                            } 
+                        }else{
+                            System.out.println("Debe ser un numero mayor a 5");
+                        }
+                        //Arrays.sort(arreglo);
+                        for(int i=0;i<tamano;i++){
+                            if ("F".equals(arreglo[i].getSexo())){
+                                suma=suma+arreglo[i].getPuntaje();
+                                System.out.println("Esto es suma: "+suma);
+                            }
+                        }
+                        promedio=suma/contF;
+                        System.out.println("Promedio mujeres :"+promedio);
+                       
+                        
+                        
+                        break;
+
                         
                     case "21":
                         Scanner sc21 = new Scanner (System.in);
@@ -246,6 +285,17 @@ public class ELECTIVOJAVACLASES {
                         eje28.votacion();
                         
                         break;
+                        
+                        
+                    case "30":
+                        Scanner sc30 = new Scanner(System.in);
+                        System.out.println("Introduce un número");
+                        String numeroIngresado30 = sc30.nextLine();
+                        Ejercicio30 eje30 = new Ejercicio30(numeroIngresado30);
+                        eje30.isTio();
+                        break;
+                        
+                       
                                
                  
                     case "31":
