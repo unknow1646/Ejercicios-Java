@@ -205,21 +205,22 @@ public class ELECTIVOJAVACLASES {
                         
                     case "16":
                         float promedio=0, suma=0;
-                        int contM=0,  contF=0;
+                        int contM=0,  contF=0,k=0,i=0;
                         Scanner sc16 = new Scanner(System.in);
                         System.out.println("Ingrese el numero de estudiantes ");
                         int tamano= sc16.nextInt();
                         String salto16=sc16.nextLine();
                         Ejercicio16 arreglo[]= new Ejercicio16[tamano];
                         if(tamano>=6){
-                            for(int i=0;i<tamano;i++){
+                            for( i=0;i<tamano;i++){
                                 System.out.println("Ingrese Sexo del estudiante (M o F ");
                                 String sexo= sc16.nextLine();
-                                if(sexo=="F"){
-                                    contF=contF+1;
-                                }else{
+                                if(!"F".equals(sexo)){
                                     contM=contM+1;
+                                }else{
+                                    contF=contF+1;
                                 }
+                                System.out.println("CONTADOR: "+contF);
                                 System.out.println("Ingrese Puntaje del estudiante: ");
                                 float puntaje  = sc16.nextFloat();
                                 String salto161=sc16.nextLine();
@@ -229,17 +230,29 @@ public class ELECTIVOJAVACLASES {
                         }else{
                             System.out.println("Debe ser un numero mayor a 5");
                         }
-                        //Arrays.sort(arreglo);
-                        for(int i=0;i<tamano;i++){
+                        Arrays.sort(arreglo);
+                        for(i=0;i<tamano;i++){
+                            
                             if ("F".equals(arreglo[i].getSexo())){
                                 suma=suma+arreglo[i].getPuntaje();
-                                System.out.println("Esto es suma: "+suma);
+                                System.out.println("Arreglo ordenaro: "+arreglo[i].getPuntaje());
                             }
                         }
                         promedio=suma/contF;
                         System.out.println("Promedio mujeres :"+promedio);
-                       
-                        
+                        System.out.println("El sexo con mayor puntaje es: "+arreglo[0].getSexo()+
+                                " con "+arreglo[0].getPuntaje()+" puntos.");
+                        while("M".equals(arreglo[k].getSexo())){
+                            k=k+1;
+                        }
+                        System.out.println("Mejor puntaje de sexo Femenino:"+arreglo[k].getPuntaje());
+                        int contp=0;
+                        for(i=0;i<tamano;i++){
+                            if(arreglo[i].getPuntaje()<500)
+                                contp++;
+                        }
+                        int porcentajeInferior=contp*100/tamano;
+                        System.out.println("Un "+porcentajeInferior+"% tiene inferior a 500 puntos");
                         
                         break;
 

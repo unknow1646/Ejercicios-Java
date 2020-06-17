@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Hernàn
  */
-public class Ejercicio16 {
+public class Ejercicio16 implements Comparable<Ejercicio16> {
     private String sexo;
     private float puntaje;
     
@@ -22,6 +22,17 @@ public class Ejercicio16 {
         
         
        
+    }
+    
+    @Override
+    public int compareTo(Ejercicio16 E){
+        if (puntaje < E.puntaje) {
+                return 1;
+            }
+            if (puntaje > E.puntaje) {
+                return -1;
+            }
+            return 0;
     }
 
     /**
