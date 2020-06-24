@@ -129,6 +129,32 @@ public class ELECTIVOJAVACLASES {
                         eje5.mostrar();
                         break;
                         
+                    case "6":
+                        int contador=0;
+                        Scanner sc6 = new Scanner(System.in);
+                        System.out.println("Ingrese el numero de obreros ");
+                        int N6= sc6.nextInt();
+                        String salto6=sc6.nextLine();
+                        Ejercicio6 arreglo6[]= new Ejercicio6[N6];
+                        for(int i=0;i<N6;i++){
+                            contador=contador+1;
+                            System.out.println("Ingrese Nombre del obrero "+contador+" :");
+                            String nombre= sc6.nextLine();
+                            System.out.println("Ingrese Apellido del obrero "+contador+" :");
+                            String apellido = sc6.nextLine();
+                            System.out.println("Ingrese horas de trabajo del obrero "+contador+" :");
+                            int horasTrabajo= sc6.nextInt();
+                            String salto66=sc6.nextLine();
+                            System.out.println("Ingrese sueldo por hora");
+                            float sueldoIngresado=sc6.nextInt();
+                            String salto666=sc6.nextLine();
+                            arreglo6[i] = new Ejercicio6(nombre,apellido,horasTrabajo,sueldoIngresado);
+                        } 
+                        for(int i=0; i<N6;i++){
+                            arreglo6[i].mostrarcalculo6();
+                        }
+                        break;
+                        
                     case "7":
                         Ejercicio7 eje7 = new Ejercicio7();
                         eje7.suma();
