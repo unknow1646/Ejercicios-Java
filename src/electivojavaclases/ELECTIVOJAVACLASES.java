@@ -160,6 +160,11 @@ public class ELECTIVOJAVACLASES {
                         eje7.suma();
                         break;
                         
+                    case "8":
+                        Ejercicio8 eje8 = new Ejercicio8();
+                        eje8.precio();
+                        break;
+                        
                     case "9":
                          System.out.println("Introduzca la fecha con formato dd-mm-yyyy");
                          Scanner sc9 = new Scanner(System.in);
@@ -207,6 +212,11 @@ public class ELECTIVOJAVACLASES {
                         }
                         Ejercicio12 eje12 = new Ejercicio12(notas,N12);
                         eje12.promedio();
+                        break;
+                    
+                    case "13":
+                        Ejercicio13 eje13 = new Ejercicio13();
+                        eje13.multiplicar();
                         break;
                     
                     case "14":
@@ -281,6 +291,33 @@ public class ELECTIVOJAVACLASES {
                         System.out.println("Un "+porcentajeInferior+"% tiene inferior a 500 puntos");
                         
                         break;
+                        
+                    case "18":
+                        int numfib=0;
+                        Scanner sc18 = new Scanner(System.in);
+                        System.out.println("Ingrese un numero ");
+                        int numero = sc18.nextInt();
+                        Ejercicio18 eje18 = new Ejercicio18(numero);
+                        System.out.println("El resultado de la sucesion A es: ");
+                        eje18.suceba(numero);
+                        System.out.println("El resultado de la sucesion B es: ");
+                        eje18.sucecb(numero);
+                        break;
+                        
+                    case "19":
+                        System.out.println("Ejercicio 19");
+                        Ejercicio19 eje19 = new Ejercicio19();
+                        eje19.porcentaje();
+                        eje19.aumento();
+                        eje19.cantidad();
+                        eje19.promedio();
+                        break;
+                        
+                    case "20":
+                        System.out.println("Ejercicio 20");
+                        Ejercicio20 eje20 = new Ejercicio20();
+                        eje20.multiplicar();
+                        break;
 
                         
                     case "21":
@@ -304,12 +341,87 @@ public class ELECTIVOJAVACLASES {
                         eje22.combinatoria(numeroIngresadoA,numeroIngresadoB);
                         break;
                         
+                    case "23":
+                        Scanner sc23 = new Scanner (System.in);
+                        Ejercicio23 eje23 = new Ejercicio23();
+                        System.out.println("Ingrese el valor de x:");
+                        int x= sc23.nextInt();
+                        String salto23=sc23.nextLine();
+                        eje23.evaluar(x);
+                        break;
+                        
+                    case "24":
+                        int contador24=0;
+                        Scanner sc24 = new Scanner(System.in);
+                        System.out.println("Ingrese el numero de obreros ");
+                        int N24= sc24.nextInt();
+                        String salto24=sc24.nextLine();
+                        Ejercicio24 arreglo24[]= new Ejercicio24[N24];
+                        for(int i2=0;i2<N24;i2++){
+                            contador24=contador24+1;
+                            System.out.println("Ingrese Codigo del obrero "+contador24+" :");
+                            int codTrabajador= sc24.nextInt();
+                            String salto244=sc24.nextLine();
+                            System.out.println("Ingrese horas de trabajo del obrero "+contador24+" :");
+                            int horasTrabajo= sc24.nextInt();
+                            String salto66=sc24.nextLine();
+                            System.out.println("Ingrese horas extra del trabajador "+contador24+" :");
+                            int horasExtra= sc24.nextInt();
+                            String salto2441=sc24.nextLine();
+                            
+                            arreglo24[i2] = new Ejercicio24(codTrabajador,horasTrabajo,horasExtra);
+                        } 
+                        
+                        for(int i2=0; i2<N24;i2++){
+                            arreglo24[i2].mostrar();
+                        }
+                        System.out.println("--------------------------------------------");
+                        System.out.println("TRABAJADOR CON MAYOR SUELDO");
+                        Arrays.sort(arreglo24);
+                        arreglo24[0].mostrar();
+                        
+                        
+                        
+                        break;
+                     
+                    case "25":
+                        System.out.println("Ejercicio 25");
+                        Ejercicio25 eje25 = new Ejercicio25();
+                        eje25.domingopas();
+                        break;
+                        
                         
                     case "26":
-                        Ejercicio26 eje26 = new Ejercicio26();
-                        System.out.println("El promedio de notas es :"+eje26.promedio());
-                        eje26.menornota();
+                       Scanner sc26 = new Scanner(System.in);
+                        System.out.println("Ingrese el numero de alumnos ");
                         
+                        int n26= sc26.nextInt();
+                        String salto26=sc26.nextLine();
+                        Ejercicio26 eje26[]= new Ejercicio26[n26];
+                        for(int i26=0;i26<n26;i26++)
+                            eje26[i26]= new Ejercicio26();
+                        for(int i26=0;i26<n26;i26++){
+                            int j=i26+1;
+                            System.out.println("Alumno: "+j);
+                            eje26[i26].menornota();
+                        }
+        
+                        float menor26=eje26[0].promedio();
+                        int ban26=0;
+                        for (int i26=0;i26<n26;i26++){
+                            if(menor26>eje26[i26].promedio()){
+                                menor=eje26[i26].promedio();
+                                ban26=i26+1;
+                            }
+                        }
+                        System.out.println("El menor promedio es "+menor26+" del alumno "+ban26);
+                        int cont26=0;
+                        for(int i26=0;i26<n26;i26++){
+                            if(eje26[i26].cantAsig>4)
+                                cont26++;
+                        }
+                        int porcentaje26=cont26*100/n26;
+                        System.out.println("Un "+porcentaje26+"% tiene más de 4 asignaturas");
                         break;
                         
                     case "28":
