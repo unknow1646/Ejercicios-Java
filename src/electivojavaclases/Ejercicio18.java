@@ -10,10 +10,10 @@ package electivojavaclases;
  * @author Hernàn
  */
 public class Ejercicio18 {
-    public int numeroIngreasado;
+    public int numeroIngresado;
     
     public Ejercicio18(int n){
-        this.numeroIngreasado=n;
+        this.numeroIngresado=n;
         
     }
     
@@ -24,7 +24,7 @@ public class Ejercicio18 {
        return fib(numeroIngresado - 1) + fib(numeroIngresado - 2);  
     }
     
-    public void suceba(int numeroIngresado){
+    public void suceba(){
         int numfib=0;
         while(numfib<=numeroIngresado){
             System.out.println(fib(numfib));
@@ -32,7 +32,7 @@ public class Ejercicio18 {
         }
     }
     
-    public void sucecb(int numeroIngresado){
+    public void sucecb(){
         int auxiliar=0;
         for (int i = 1; i <= numeroIngresado; i++) {
             auxiliar = auxiliar*10+i;

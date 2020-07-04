@@ -299,9 +299,9 @@ public class ELECTIVOJAVACLASES {
                         int numero = sc18.nextInt();
                         Ejercicio18 eje18 = new Ejercicio18(numero);
                         System.out.println("El resultado de la sucesion A es: ");
-                        eje18.suceba(numero);
+                        eje18.suceba();
                         System.out.println("El resultado de la sucesion B es: ");
-                        eje18.sucecb(numero);
+                        eje18.sucecb();
                         break;
                         
                     case "19":
@@ -423,7 +423,14 @@ public class ELECTIVOJAVACLASES {
                         int porcentaje26=cont26*100/n26;
                         System.out.println("Un "+porcentaje26+"% tiene más de 4 asignaturas");
                         break;
+                    case "27":
                         
+                        Scanner sc27 = new Scanner(System.in);
+                        System.out.println("INGRESE EL TIPO DE ANIMAL");
+                        String animal = sc27.nextLine();
+                        Ejercicio27 eje27 = new Ejercicio27(animal);
+                        eje27.animales();
+                        break;
                     case "28":
                         Scanner sc28 = new Scanner(System.in);
                         System.out.println("INTRODUCE EL NOMBRE DEL PRIMER CANDIDATO");
