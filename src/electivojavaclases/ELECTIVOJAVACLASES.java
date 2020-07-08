@@ -465,6 +465,18 @@ public class ELECTIVOJAVACLASES {
                         eje31.Primo();
                         break;
                         
+                    case "33":
+                        Scanner sc33 = new Scanner(System.in);
+                        System.out.println("Ingrese el valor de N");
+                        int ingresoN33=sc33.nextInt();
+                        salto=sc33.nextLine();
+                        System.out.println("Ingrese el valor de X");
+                        int ingresoX33=sc33.nextInt();
+                        salto=sc33.nextLine();
+                        Ejercicio33 eje33 = new Ejercicio33(ingresoN33,ingresoX33);
+                        eje33.serie();
+                        break;
+                        
                         
                     case "34":
                         Scanner sc34 = new Scanner(System.in);

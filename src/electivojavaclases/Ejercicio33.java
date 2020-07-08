@@ -9,31 +9,22 @@ package electivojavaclases;
  *
  * @author Hernàn
  */
-public class Ejercicio34 extends Ejercicio21{
+public class Ejercicio33 {
     public int ingresoN;
     public int ingresoX;
     
-    
-    public Ejercicio34(int N, int X){
+    public Ejercicio33(int N, int X){
         this.ingresoN=N;
         this.ingresoX=X;
-        
     }
-    
     
     public void serie(){
         float resultado=0,terminos=0;
-        System.out.println("TERMINOS DE LA SERIE :");
-        for (int i=1;i<=ingresoN;i++){
-            if((i-1)%2==0){
-                terminos=-(float) ((Math.pow(ingresoX, i))/factorial(i));   
-            }else{
-                terminos=+(float) ((Math.pow(ingresoX, i))/factorial(i));     
-            }
-            resultado=terminos+resultado;
-            //System.out.println(resultado);
+        System.out.println("TERMINOS DE LA SERIE");
+        for(int i=1;i<=ingresoN;i++){
+            terminos=(float) (i/(Math.pow(ingresoX,i)));
             System.out.print(terminos+"  ");
-            
+            resultado=resultado+terminos;
         }
         System.out.println("\nEl resultado de la serie es: "+resultado);
         
