@@ -22,11 +22,16 @@ public class Ejercicio34 extends Ejercicio21{
     
     
     public void serie(){
-        float resultado=0,terminos=0;
+        float resultado=0,terminos=0,signo=-1;
         System.out.println("TERMINOS DE LA SERIE :");
         for (int i=1;i<=ingresoN;i++){
-            resultado=(float) ((Math.pow(-ingresoX, i))/factorial(i))+resultado;
-            terminos=(float) ((Math.pow(-ingresoX, i))/factorial(i));
+            if((i-1)%2==0){
+                terminos=-(float) ((Math.pow(ingresoX, i))/factorial(i));   
+            }else{
+                terminos=+(float) ((Math.pow(ingresoX, i))/factorial(i));     
+            }
+            resultado=terminos+resultado;
+            //System.out.println(resultado);
             System.out.print(terminos+"  ");
             
         }
