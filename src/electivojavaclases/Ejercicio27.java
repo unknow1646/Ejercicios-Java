@@ -26,15 +26,15 @@ public class Ejercicio27 {
         int porcentajeA, porcentajeB, porcentajeC;
         Scanner sc1 = new Scanner(System.in);
         if("ELEFANTE".equals(tipoAnimal)){
-            edadAnimal= new int[5];
+            edadAnimal= new int[20];
         }
         
         if("JIRAFA".equals(tipoAnimal)){
-            edadAnimal= new int[5];
+            edadAnimal= new int[15];
         }
         
         if("CHIMPANCE".equals(tipoAnimal)){
-            edadAnimal= new int [5];
+            edadAnimal= new int [40];
         }
         for(int i=0;i<edadAnimal.length;i++){
                 int contador=i+1;
