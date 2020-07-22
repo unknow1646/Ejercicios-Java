@@ -79,9 +79,10 @@ public class ELECTIVOJAVACLASES {
                         break;
                         
                     case "4":
+                        String salir="N";
                         Scanner sc4 = new Scanner(System.in);
+                        while(salir!="S"){
                         System.out.println("Ingrese el numero de alumnos ");
-                        
                         int n= sc4.nextInt();
                         String salto=sc4.nextLine();
                         Ejercicio4 eje4[]= new Ejercicio4[n];
@@ -110,6 +111,13 @@ public class ELECTIVOJAVACLASES {
                         }
                         int porcentaje=cont*100/n;
                         System.out.println("Un "+porcentaje+"% tiene más de 4 asignaturas");
+                        System.out.println("Desea continuar? [S/N] ");
+                        salir=sc4.nextLine();
+                        if(salir.equals("S")){
+                            salir="N";
+                        }else
+                            salir="S";
+                        }
                         break;
                         
                     case "5":
@@ -382,7 +390,6 @@ public class ELECTIVOJAVACLASES {
                         break;
                      
                     case "25":
-                        System.out.println("Ejercicio 25");
                         Ejercicio25 eje25 = new Ejercicio25();
                         eje25.domingopas();
                         break;
@@ -408,7 +415,7 @@ public class ELECTIVOJAVACLASES {
                         int ban26=0;
                         for (int i26=0;i26<n26;i26++){
                             if(menor26>eje26[i26].promedio()){
-                                menor=eje26[i26].promedio();
+                                menor26=eje26[i26].promedio();
                                 ban26=i26+1;
                             }
                         }
@@ -474,10 +481,11 @@ public class ELECTIVOJAVACLASES {
                         break;
                         
                     case "33":
+                        
                         Scanner sc33 = new Scanner(System.in);
                         System.out.println("Ingrese el valor de N");
                         int ingresoN33=sc33.nextInt();
-                        salto=sc33.nextLine();
+                        String salto=sc33.nextLine();
                         System.out.println("Ingrese el valor de X");
                         int ingresoX33=sc33.nextInt();
                         salto=sc33.nextLine();
