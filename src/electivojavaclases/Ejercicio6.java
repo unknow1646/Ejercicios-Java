@@ -22,7 +22,7 @@ public class Ejercicio6 extends Ejercicio3{
     public float salario(){
         int horasExtra= horasTrabajo-40;
         if(horasTrabajo<=40){
-            salario=sueldoIngresado*40;
+            salario=sueldoIngresado*horasTrabajo;
         }
         
         if(horasTrabajo>40 && horasExtra <=8){
