@@ -19,11 +19,11 @@ public class Ejercicio15 {
     
     public void palindromo(){
        int numero= Integer.parseInt(numeroIngresado15);
-       int aux= Integer.parseInt(numeroIngresado15);;
+       int aux= Integer.parseInt(numeroIngresado15);
        int[] original = new int[numeroIngresado15.length()];
        int[] auxiliar = new int[numeroIngresado15.length()];
-       int i=original.length - 1,k=0;
-       boolean pal = false;
+       int i=original.length - 1,k=0,j=0;
+       boolean pal = true;
        
        while (numero > 0) {
             original[i] = numero%10;
@@ -36,12 +36,15 @@ public class Ejercicio15 {
            k++;
        }
        
-       for(int j = 0;j<original.length;j++){
+       while(pal==true && j<original.length){
+           System.out.println("Esto es original "+original[j]);
+           System.out.println("Esto es auxiliar "+auxiliar[j]);
            if(original[j]==auxiliar[j]){
                pal=true;
            }else{
                pal=false;
            }
+           j++;
            
        }
        if(pal==true){
