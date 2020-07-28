@@ -271,22 +271,20 @@ public class ELECTIVOJAVACLASES {
                                 }else{
                                     contF=contF+1;
                                 }
-                                System.out.println("CONTADOR: "+contF);
+                                
                                 System.out.println("Ingrese Puntaje del estudiante: ");
                                 float puntaje  = sc16.nextFloat();
                                 String salto161=sc16.nextLine();
                                 arreglo[i] = new Ejercicio16(sexo,puntaje);
                                 
                             } 
-                        }else{
-                            System.out.println("Debe ser un numero mayor a 5");
-                        }
+                        
                         Arrays.sort(arreglo);
                         for(i=0;i<tamano;i++){
                             
                             if ("F".equals(arreglo[i].getSexo())){
                                 suma=suma+arreglo[i].getPuntaje();
-                                System.out.println("Arreglo ordenaro: "+arreglo[i].getPuntaje());
+                                
                             }
                         }
                         promedio=suma/contF;
@@ -304,6 +302,9 @@ public class ELECTIVOJAVACLASES {
                         }
                         int porcentajeInferior=contp*100/tamano;
                         System.out.println("Un "+porcentajeInferior+"% tiene inferior a 500 puntos");
+                        }else{
+                            System.out.println("Debe ser un numero mayor a 5");
+                        }
                         break;
                         
                     case "17":
@@ -405,7 +406,9 @@ public class ELECTIVOJAVACLASES {
                         
                         
                     case "26":
-                       Scanner sc26 = new Scanner(System.in);
+                        String salir26="N";
+                        Scanner sc26 = new Scanner(System.in);
+                        while(salir26!="S"){
                         System.out.println("Ingrese el numero de alumnos ");
                         
                         int n26= sc26.nextInt();
@@ -436,11 +439,18 @@ public class ELECTIVOJAVACLASES {
                         }
                         int porcentaje26=cont26*100/n26;
                         System.out.println("Un "+porcentaje26+"% tiene más de 4 asignaturas");
+                        System.out.println("Desea continuar? [S/N] ");
+                        salir26=sc26.nextLine();
+                        if(salir26.equals("S")){
+                            salir26="N";
+                        }else
+                            salir26="S";
+                        }
                         break;
                         
                     case "27":
                         Scanner sc27 = new Scanner(System.in);
-                        System.out.println("INGRESE EL TIPO DE ANIMAL");
+                        System.out.println("INGRESE EL TIPO DE ANIMAL EN MAYUSCULA (ELEFANTE,CHIMPANCE,JIRAFA)");
                         String animal = sc27.nextLine();
                         Ejercicio27 eje27 = new Ejercicio27(animal);
                         eje27.animales();
