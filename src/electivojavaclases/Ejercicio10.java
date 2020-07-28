@@ -29,8 +29,8 @@ public class Ejercicio10 {
         LocalDate fechaNac = LocalDate.parse(fechaNacimiento, fmt);
         LocalDate fechaAct = LocalDate.now();
         Period periodo = Period.between(fechaNac, fechaAct);
-        System.out.printf("Su edad es: %s años, %s meses y %s días",
-                periodo.getYears(), periodo.getMonths(), periodo.getDays());
+        System.out.println("Su edad es :"+periodo.getYears()+" Años"+
+                ","+periodo.getMonths()+" Meses"+","+ periodo.getDays()+" Dias");
         
     }
     
