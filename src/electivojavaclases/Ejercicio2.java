@@ -35,7 +35,7 @@ public class Ejercicio2 {
                cant=cant+1;   
             }
         }
-        System.out.println("La cantidad de pares entre los numeroes es:"+cant);
+        System.out.println("La cantidad de pares entre los numero es es:"+cant);
     }
     
     public void sumimpar(){

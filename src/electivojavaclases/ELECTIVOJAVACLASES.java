@@ -54,7 +54,9 @@ public class ELECTIVOJAVACLASES {
                         break;
                         
                     case "3":
+                        String continuar="N";
                         Scanner sc1 = new Scanner(System.in);
+                        while(continuar!="S"){
                         System.out.println("Ingrese el numero de obreros ");
                         int N= sc1.nextInt();
                         String salto1=sc1.nextLine();
@@ -75,6 +77,13 @@ public class ELECTIVOJAVACLASES {
                             for(int i=0; i<N;i++){
                                 a[i].mostrarcalculo();
                             }
+                        }
+                        System.out.println("Desea continuar? [S/N] ");
+                        continuar=sc1.nextLine();
+                        if(continuar.equals("S")){
+                            continuar="N";
+                        }else
+                            continuar="S";
                         }
                         break;
                         
